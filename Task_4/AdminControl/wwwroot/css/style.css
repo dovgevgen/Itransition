@@ -1,0 +1,71 @@
+﻿* {
+    outline: 0 none !important;
+    text-decoration: none !important;
+}
+
+body {
+    background-image: url(../images/background/candyhole.png);
+}
+
+
+@media (min-width: 992px) {
+    #toolBar {
+        position: fixed;
+        top: 45%;
+        border-radius:5px;
+        background-color: rgba(163,163,163,.8);
+    }
+}
+
+
+@media (max-width: 991px) {
+    #toolBar {
+        margin-bottom: 10px;
+    }
+}
+
+.alertMessage {
+    position: fixed;
+    top: 70px;
+    right: 5%;
+    z-index: 10000;
+    padding: 0 7px 0 7px;
+}
+
+@media (min-width: 992px) {
+    .imageCarusel {
+        min-height: 400px;
+        max-height: 400px;
+        margin: auto;
+    }
+}
+
+#myCarousel {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 786px) {
+    #myCarousel {
+        display: none;
+    }
+}
+
+#mobileText {
+    margin-top: 200px;
+}
+
+@media (min-width: 787px) {
+    #mobileText {
+        display: none;
+    }
+}
+
+#userList {
+    background-color: rgba(230,230,230,.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+
+
