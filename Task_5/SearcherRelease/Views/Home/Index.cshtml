@@ -1,0 +1,49 @@
+﻿@model List<SearcherRelease.Models.ParseResult>
+@using PagedList.Mvc;
+<div style="width:100%;">
+    <img src="/Content/img/spinner.gif" class="spinner" id="spin" />
+</div>
+<div id="upButton">
+    <img src="/Content/img/upbutton.svg" style="height: 50px;" />
+</div>
+<div id="searchPanel">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div class="input-group" id="searchInput">
+            <input type="text" class="form-control" placeholder="Search..." autofocus name="input_field" />
+            <span class="input-group-btn">
+                <button id="searchButton" class="btn btn-default" type="submit" onclick=Spinner()><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+        </div>
+    }
+</div>
+
+<div class="container">
+    <div id="contentDiv">
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <a href="@item.Href" target="_blank">
+                    <div class="col-sm-6 col-md-4 itemConteiner">
+                        <div class="thumbnail">
+                            <img class="itemPic" src="@item.Image" alt="@item.Name">
+                            <div class="caption">
+                                <h4 class="itemName">@item.Name</h4>
+                                @if (item.Count == "")
+                                {
+                                    <p>Нет в наличии</p>
+                                }
+                                else
+                                {
+                                    <p>Количество: @item.Count шт.</p>
+                                }
+                                <p>Цена: @item.Cost</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+        }
+    </div>
+</div>
