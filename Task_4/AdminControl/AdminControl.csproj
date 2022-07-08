@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AspNet.Security.OAuth.VK" Version="0.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="2.0.0" />
